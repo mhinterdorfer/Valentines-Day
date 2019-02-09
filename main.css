@@ -1,0 +1,71 @@
+body {
+  background-color: lightgray;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 2vw 0 13vw 0;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 8vw;
+}
+
+.description {
+  padding: 13vw 2vw 5vw 2vw;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 3vw;
+}
+
+.heart {
+  animation: heartbeat 1.1s infinite;
+  background-color: red;
+  height: 20vw;
+  display: block;
+  margin: auto;
+  transform: rotate(-45deg);
+  width: 20vw;
+}
+
+.heart-click {
+  animation: heartbeat 0.5s infinite;
+  background-color: red;
+  height: 20vw;
+  display: block;
+  margin: auto;
+  transform: rotate(-45deg);
+  width: 20vw;
+}
+
+.heart:before,
+.heart:after,
+.heart-click:before,
+.heart-click:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 20vw;
+  position: absolute;
+  width: 20vw;
+}
+
+.heart:before,
+.heart-click:before {
+  top: -10vw;
+  left: 0;
+}
+
+.heart:after,
+.heart-click:after {
+  left: 10vw;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  40% {
+    transform: scale(1.5) rotate(-45deg);
+  }
+}
